@@ -49,7 +49,7 @@ app.post('/api/convert', upload.single('file'), async (req, res) => {
     }
 
     // 2. Send the extracted text to Gemini AI
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); 
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); 
     const prompt = `You are an expert accountant. Convert the following bank statement data into a Tally Prime importable XML format. 
     Rules: 
     - Use "Bank Account" as the Bank Ledger Name.
